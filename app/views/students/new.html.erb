@@ -1,0 +1,32 @@
+<form action="/students" method="POST">
+  <label>First name</label>
+  <input
+    name="first_name"
+    type="text"
+    placeholder=<%= @placeholder_first %>
+  >
+  </input>
+  <label>Last name</label>
+  <input
+    name="last_name"
+    type="text"
+    placeholder=<%= @placeholder_last %>
+  >
+  </input>
+  <label>Age</label>
+  <input
+    name="age"
+    placeholder=<%= @placeholder_age %>
+    type="text"
+  >
+  </input>
+  <label>Year</label>
+  <input 
+    name="year" 
+    type="text"
+    placeholder=<%= @placeholder_year %>
+  >
+  </input>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button type="submit">Create student</button>
+</form>
